@@ -1,0 +1,111 @@
+.whisky-table {
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  table {
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  tr:hover {
+    background-color: #4b4848;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  /*,*/
+
+    /*{
+      nombre: "Tanqueray London Dry Gin x 700 ml",
+      precio: ["$ 5.500,00", "$ 7.217,09", "$ 8.800,00"],
+    },
+    {
+      nombre: "Gordon's Gin x 700 ml",
+      precio: ["$ 4.000,00", "$ 5.267,97", "$ 6.400,00"],
+    },
+    {
+      nombre: "Bombay Sapphire Gin x 700 ml",
+      precio: ["$ 6.500,00", "$ 8.588,12", "$ 10.400,00"],
+    },
+    {
+      nombre: "Hendrick's Gin x 700 ml",
+      precio: ["$ 8.000,00", "$ 10.588,12", "$ 12.800,00"],
+    },*/
+
+    /* {
+      nombre: "Malbec 750 ml",
+      precio: ["$ 1.200,00", "$ 1.600,00", "$ 2.000,00"],
+    },
+    {
+      nombre: "Cabernet Sauvignon 750 ml",
+      precio: ["$ 1.500,00", "$ 2.000,00", "$ 2.500,00"],
+    },
+    {
+      nombre: "Chardonnay 750 ml",
+      precio: ["$ 1.300,00", "$ 1.700,00", "$ 2.100,00"],
+    },
+    {
+      nombre: "Syrah 750 ml",
+      precio: ["$ 1.400,00", "$ 1.800,00", "$ 2.200,00"],
+    },*/
+
+
+    /*{
+      nombre: "Gatorade x 600 ml",
+      precio: ["$ 1.500,00", "$ 1.968,73", "$ 2.400,00"],
+    },
+    {
+      nombre: "Agua Sin Gas 1.5 litros",
+      precio: ["$ 1.250,00", "$ 1.641,00", "$ 1.600,00"],
+    },
+    {
+      nombre: "Agua Con Gas 1.5 litros",
+      precio: ["$ 1.250,00", "$ 1.641,00", "$ 1.600,00"],
+    },
+    {
+      nombre: "Cerveza Cuyana 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },
+    {
+      nombre: "Cerveza Patagonia 1 litro",
+      precio: ["$ 2.000,00", "$ 2.387,87", "$ 2.880,00"],
+    },
+    {
+      nombre: "Cerveza Budweiser 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },
+    {
+      nombre: "Cerveza Quilmes 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },
+    {
+      nombre: "Cerveza Stella Artois 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },
+    {
+      nombre: "Cerveza Heineken 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },
+    {
+      nombre: "Cerveza Corona 1 litro",
+      precio: ["$ 1.750,00", "$ 2.084,66", "$ 2.496,00"],
+    },*/

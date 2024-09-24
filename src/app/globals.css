@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body, html {
+  font-family: 'Open Sans '; /* Reemplaza 'Roboto' con la tipografía que prefieras */
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    color-scheme: dark;
+    color: CanvasText;
+    background-color: Canvas;
+  }
+
+  .h1{
+    margin: 8px;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2 rem; 
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem; 
+      margin: 1rem;
+      padding: 0.5rem;
+    }
+  }
+  
