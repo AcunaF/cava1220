@@ -2,9 +2,9 @@ import "./headey.styles.css"
 import Image from "next/image";
 export default function Header() {
     return (
-      <div className="headerHe shadow-lg">
+      <div className="headerHe">
       <h1 className="main-title">
-  TIENDA DE BEBIDAS • EVENTOS • CATAS • DEGUSTACIONES
+  BEBIDAS • EVENTOS • CATAS • DEGUSTACIONES
 </h1>
         <Image
           className="w-full h-auto rounded-lg border-4 border-yellow-300 shadow-xl"
