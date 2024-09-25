@@ -1,8 +1,8 @@
 .carousel-container {
     position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 1650px; 
+    height: 95%;
+    width: 95%;
+    max-width: auto; 
     margin: auto;
     border-radius: 16px;
     overflow: hidden;

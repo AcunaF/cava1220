@@ -12,17 +12,17 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="m-5">
+      <div className="m-8">
         <Header />
         <Banner />
       </div>
-      <div className="m-5">
+      <div className="m-">
         <Publicidas />
       </div>
       <section className="restaurants-grid">
   {restaurants.map((restaurant) => {
     return (
-      <div key={restaurant.id} className="restaurant-card">
+      <div key={restaurant.id} className=" restaurant-card">
         <Image
           width={200} // Ajusta el ancho según el tamaño real de la imagen
           height={100} // Ajusta la altura según el tamaño real de la imagen

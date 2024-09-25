@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
 
         {/* Botón del menú hamburguesa (sólo en dispositivos móviles) */}
-        <div className="flex items-center md:hidden">
+        <div className="flex m-5 items-center md:hidden">
           <button onClick={toggleMenu} className="text-white">
             <GiHamburgerMenu size={30} />
           </button>
