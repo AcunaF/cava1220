@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import apiProductos from "../../Stock"; 
+import Image from "next/image";
+import glen from "@/public/cava1220/logoNegro.jpeg"
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import "../../app/distribuidora/style.css"; 
@@ -36,7 +38,7 @@ console.log('session: ', session?.user, 'status', status);
       <div>
       {/* Mostrar el estado de la sesión */}
       {status === "authenticated" ? (
-        <p className="m-2">Bienvenido <b className=" ">{session.user?.email || "Usuario"}</b>
+        <p className="mt-5"> <b className=" ">{session.user?.email || "Usuario"}</b>
          <small className="ml-5">Ver cuenta</small>
          <small className="ml-5">Carrito <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
          </small>
@@ -47,11 +49,11 @@ console.log('session: ', session?.user, 'status', status);
       <div className="">
         <div className="flex justify-between">
           <div className="m-1">
-            <button className="m-5" onClick={() => { setTipo('destilados'); setPaginaActual(1); }}>Destilados</button>
-            <button className="m-5" onClick={() => { setTipo('gin'); setPaginaActual(1); }}>Gin</button>
-            <button className="m-5" onClick={() => { setTipo('vinos'); setPaginaActual(1); }}>Vinos</button>
-            <button className="m-5" onClick={() => { setTipo('bebidas'); setPaginaActual(1); }}>Bebidas</button>
-            <button className="m-5 text-yellow-300 shadow-xl" onClick={() => { setTipo('promociones'); setPaginaActual(1); }}>PROMOCIONES</button>
+            <button className="m-2" onClick={() => { setTipo('destilados'); setPaginaActual(1); }}>Destilados</button>
+            <button className="m-2" onClick={() => { setTipo('gin'); setPaginaActual(1); }}>Gin</button>
+            <button className="m-2" onClick={() => { setTipo('vinos'); setPaginaActual(1); }}>Vinos</button>
+            <button className="m-2" onClick={() => { setTipo('bebidas'); setPaginaActual(1); }}>Bebidas</button>
+            <button className="m-2 text-yellow-300 shadow-xl" onClick={() => { setTipo('promociones'); setPaginaActual(1); }}>PROMOCIONES</button>
           </div>
         </div>
 
@@ -61,7 +63,13 @@ console.log('session: ', session?.user, 'status', status);
     productosPaginados.map((producto, index) => (
       <div key={index} className="card">
         <h2>{producto.nombre}</h2>
-
+        <Image
+          src={glen}
+          alt="img"
+          className="imgenImg"
+          width={2200}
+          height={90}
+        />
         <p>{producto.descripcion}</p>
         {/* Mostrar precio si el usuario está autenticado */}
         {status === "authenticated" && (

@@ -8,9 +8,9 @@ export default function Banner() {
   const carouselItemsRef = useRef([]);
   const totalItems = 5; 
 
-  const updateCarousel = (index) => {
+  const updateCarousel = () => {
     carouselItemsRef.current.forEach((item, i) => {
-      item.style.display = i === index ? "block" : "none";
+      item.style.transform = `translateX(${(i - currentIndex) * 100}%)`; // Desplazamiento horizontal
     });
   };
 
@@ -22,12 +22,31 @@ export default function Banner() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
   };
 
+  // Gestos táctiles
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    const startX = touch.clientX;
+
+    const handleTouchMove = (e) => {
+      const touchMove = e.touches[0];
+      if (startX - touchMove.clientX > 50) {
+        showNext();
+        document.removeEventListener("touchmove", handleTouchMove);
+      } else if (touchMove.clientX - startX > 50) {
+        showPrev();
+        document.removeEventListener("touchmove", handleTouchMove);
+      }
+    };
+
+    document.addEventListener("touchmove", handleTouchMove);
+  };
+
   React.useEffect(() => {
-    updateCarousel(currentIndex);
+    updateCarousel();
   }, [currentIndex]);
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" onTouchStart={handleTouchStart}>
       <h1 className="text-4xl font-bold text-white-300 mb-14 text-center">
         Nuestros eventos
       </h1>
@@ -51,6 +70,7 @@ export default function Banner() {
       </div>
 
       {/* Botón anterior */}
+      <div className="button">
       <button
         type="button"
         className="carousel-button carousel-prev"
@@ -87,6 +107,7 @@ export default function Banner() {
         </svg>
         <span className="sr-only">Siguiente</span>
       </button>
+    </div>
     </div>
   );
 }

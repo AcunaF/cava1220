@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./sheets.css";
 import Image from "next/image";
 import salentein from "@/public/tragos.webp";
+import glen from "@/public/glenfidich.png";
 const Fetchsheets = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -87,18 +88,18 @@ const Fetchsheets = () => {
 
   return (
     <div className="">
-      <div className="flex">
+      <div className="imgcontainer m-5">
         <Image
           src={salentein}
           alt="img"
-          className="m-5"
+          className="imgtragos"
           width={2200}
-          height={100}
+          height={90}
         />
       </div>
       {/* Formulario de búsqueda */}
       <div>
-        <label className="m-2">Buscar :</label>
+        <label className="m-5">Buscar :</label>
         <input
           className="m-2 p-1"
           type="text"
@@ -113,6 +114,13 @@ const Fetchsheets = () => {
           productosPaginados.map((producto, index) => (
             <div key={index} className="card">
               <h2>{producto.Nombre}</h2>
+              <Image
+          src={glen}
+          alt="img"
+          className="imgtragos"
+          width={2200}
+          height={90}
+        />
               <p>Tipo: {producto.Tipo}</p>
               <p>Neto: {producto.Neto}</p>
               <p>Lista: {producto.Lista}</p>

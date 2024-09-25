@@ -43,7 +43,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-    margin: 20px;
+    margin: 10px;
   }
   
   .card {
@@ -100,6 +100,12 @@
   
   .card-shipping button:hover {
     background-color: #357ae8;
+  }
+
+  .imgenImg{
+    width: 100% !important;
+    height: auto;
+    border-radius: 8px;
   }
   
   /*,*/
