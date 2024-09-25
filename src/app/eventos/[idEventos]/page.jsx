@@ -4,7 +4,6 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import PaymentMethods from "../../components/metodosPago/paymentMethods";
 import Image from "next/image";
-import Sidebar from "../../sidebar/sidebar.component"
 
 export default async function Eventos() {
   const { idEventos } = useParams();
@@ -49,7 +48,6 @@ export default async function Eventos() {
           </div>
         </div>
         <div className="absolute right-0 m-10">
-          <Sidebar/>
         </div>
         
       </section>

@@ -98,10 +98,10 @@ const Fetchsheets = () => {
         />
       </div>
       {/* Formulario de búsqueda */}
-      <div>
-        <label className="m-5">Buscar :</label>
+      <div className="search-container">
+        <label className="search-label">Buscar:</label>
         <input
-          className="m-2 p-1"
+          className="search-input"
           type="text"
           placeholder="Ingrese el término de búsqueda"
           value={nombreBusqueda}
@@ -115,12 +115,12 @@ const Fetchsheets = () => {
             <div key={index} className="card">
               <h2>{producto.Nombre}</h2>
               <Image
-          src={glen}
-          alt="img"
-          className="imgtragos"
-          width={2200}
-          height={90}
-        />
+                src={glen}
+                alt="img"
+                className="imgtragos"
+                width={2200}
+                height={90}
+              />
               <p>Tipo: {producto.Tipo}</p>
               <p>Neto: {producto.Neto}</p>
               <p>Lista: {producto.Lista}</p>

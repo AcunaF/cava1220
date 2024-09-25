@@ -24,3 +24,40 @@
     border-radius: 10px;
     margin-bottom: 10px;
   }
+  .search-container {
+    display: flex; 
+    align-items: center; 
+    margin: 20px; 
+  }
+  
+  .search-label {
+    margin-right: 10px;
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    color:white; 
+  }
+  
+  .search-input {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 250px; /* Ancho fijo */
+    transition: border-color 0.3s ease; /* Suavizado en el color del borde */
+  }
+  
+  .search-input::placeholder {
+    color: #aaa; /* Color del texto del placeholder */
+  }
+  
+  .search-input:focus {
+    outline: none; /* Eliminar el borde del enfoque predeterminado */
+    border-color: #007bff; /* Color del borde al hacer foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al hacer foco */
+  }
+  .divider {
+    border: none; /* Elimina el borde predeterminado */
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+    margin: 20px 0; /* Margen superior e inferior */
+    background-color: #ddd; /* Color de fondo para la línea */
+  }
+  

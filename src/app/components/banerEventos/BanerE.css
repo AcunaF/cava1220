@@ -47,7 +47,11 @@
         background: rgba(255, 255, 255, 0.8);
     }
 }
-
+.imgEventos{
+    width: 100% !important;
+    height: 400px;
+    object-fit: cover;
+}
 .carousel-prev {
     left: 10px;
 }
