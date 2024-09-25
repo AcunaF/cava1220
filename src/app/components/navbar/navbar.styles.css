@@ -1,0 +1,55 @@
+/* navbar.styles.css */
+.navcontainer {
+  width: 90%;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  border-bottom: 4px solid white;
+  position: fixed; /* Mantener el navbar en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50; /* Asegurarse de que el navbar esté por encima de otros elementos */
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1rem; /* Espaciado horizontal */
+}
+
+nav a {
+  color: white; 
+  text-decoration: none; 
+  margin-left: 2rem; 
+}
+
+nav a:hover {
+  text-decoration: underline; 
+}
+
+/* Estilos para el menú hamburguesa */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries para móviles */
+@media (min-width: 768px) {
+  .md\\:hidden {
+    display: none !important;
+  }
+  .navcontainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: flex-start;
+  }
+  .md\\:flex {
+    display: flex !important;
+  }
+}
+

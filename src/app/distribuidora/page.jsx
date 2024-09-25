@@ -36,7 +36,7 @@ const Distribuidora = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <div>
         {/* Mostrar el estado de la sesión */}
         {status === "authenticated" ? (
