@@ -15,8 +15,6 @@ error:{
 success:{
     userCreated:"user created successfully",
     userLogged:"user logged successfully"
-
-
 },
 
 
