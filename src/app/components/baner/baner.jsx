@@ -47,7 +47,7 @@ export default function Banner() {
 
   return (
     <div className="carousel-container" onTouchStart={handleTouchStart}>
-      <h1 className="text-4xl font-bold text-white-300 mb-10 text-center">
+      <h1 className="text-4xl m-5 w-full font-bold text-white-300 text-center">
         Nuestros eventos
       </h1>
       <div className="relative h-56 overflow-hidden md:h-96">
@@ -61,8 +61,8 @@ export default function Banner() {
               src={`/cava1220/carousel/images${index}.jpeg`}
               layout="responsive"
               objectFit="cover"
-              width={920}
-              height={560}
+              width={1500}
+              height={800}
               alt={`Descripción ${index + 1}`}
             />
           </div>

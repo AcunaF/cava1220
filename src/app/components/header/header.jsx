@@ -7,13 +7,13 @@ export default function Header() {
   BEBIDAS • EVENTOS • CATAS • DEGUSTACIONES
 </h1>
         <Image
-          className="w-full h-auto rounded-lg border-4 border-yellow-300 shadow-xl"
+          className="imgBorder w-full h-auto shadow-xl"
           src={`/cava1220/header/celebrar.jpg`}
           alt="Celebración"
-          width={200}
-          height={100}
+          width={700}
+          height={200}
         />
       </div>
     );
   }
-  
+  /*1px solid #baab8f rounded-lg border-4 border-yellow-300*/

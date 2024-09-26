@@ -2,13 +2,14 @@ import apiEventos from "../../apiEventos";
 import Link from "next/link";
 import BannerEventos from "../components/banerEventos/banerEventos";
 import Image from "next/image";
+import "./styles.css"
 
 export default async function Eventos() {
   // Obtener la lista de eventos del lado del servidor
   const eventos = await apiEventos.list();
 
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="m-5">
         <BannerEventos />
         <h1 className="text-3xl font-bold">Eventos</h1>
@@ -17,17 +18,18 @@ export default async function Eventos() {
           programados para ti.
         </p>
       </div>
-      <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="page-header">
+      <section className=" grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         {eventos.map((evento) => (
           <div
             key={evento.id}
-            className="p-4 border border-gray-200 rounded-lg"
+            className="imgborder p-4 imgborder"
           >
             <Image
               alt={evento.title}
               className="mb-3 h-[300px] w-full object-cover"
-              width={100}
-              height={300}
+              width={500}
+              height={400}
               src={evento.image}
             />
             <h2 className="text-xl font-bold mb-2">
@@ -49,6 +51,7 @@ export default async function Eventos() {
           </div>
         ))}
       </section>
+      </div>
     </div>
   );
 }

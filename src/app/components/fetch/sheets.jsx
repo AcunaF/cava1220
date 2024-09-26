@@ -108,37 +108,38 @@ const Fetchsheets = () => {
           onChange={(e) => setNombreBusqueda(e.target.value)}
         />
       </div>
-
-      <div className="productos-grid">
-        {productosPaginados.length > 0 ? (
-          productosPaginados.map((producto, index) => (
-            <div key={index} className="card">
-              <h2>{producto.Nombre}</h2>
-              <Image
-                src={glen}
-                alt="img"
-                className="imgtragos"
-                width={2200}
-                height={90}
-              />
-              <p>Tipo: {producto.Tipo}</p>
-              <p>Neto: {producto.Neto}</p>
-              <p>Lista: {producto.Lista}</p>
-              <p>Stock: {producto.Stock}</p>
-              <div className="card-actions">
-                <button onClick={() => alert("Agregado al carrito")}>
-                  Agregar
-                </button>
-                <button onClick={() => alert("Quitado del carrito")}>
-                  Quitar
-                </button>
+      <div className="container mx-auto">
+        <div className="productos-grid ">
+          {productosPaginados.length > 0 ? (
+            productosPaginados.map((producto, index) => (
+              <div key={index} className="card">
+                <h2>{producto.Nombre}</h2>
+                <Image
+                  src={glen}
+                  alt="img"
+                  className="imgtragos"
+                  width={2200}
+                  height={90}
+                />
+                <p>Tipo: {producto.Tipo}</p>
+                <p>Neto: {producto.Neto}</p>
+                <p>Lista: {producto.Lista}</p>
+                <p>Stock: {producto.Stock}</p>
+                <div className="card-actions">
+                  <button onClick={() => alert("Agregado al carrito")}>
+                    Agregar
+                  </button>
+                  <button onClick={() => alert("Quitado del carrito")}>
+                    Quitar
+                  </button>
+                </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <p>No hay productos disponibles.</p>
-        )}
-      </div>
+            ))
+          ) : (
+            <p>No hay productos disponibles.</p>
+          )}
+        </div>
+     
 
       {/* Paginación */}
       <div className="pagination">
@@ -159,6 +160,7 @@ const Fetchsheets = () => {
         >
           Siguiente
         </button>
+      </div>
       </div>
     </div>
   );

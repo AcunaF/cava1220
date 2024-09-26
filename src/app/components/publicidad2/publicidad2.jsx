@@ -1,12 +1,15 @@
+import "./styles.css"
+import Image from "next/image"
 export default function Publicidad2 (){
-
-    return (<div className="m-5 p-5  rounded-lg shadow-lg">
-    <h1 className="text-4xl font-bold text-white-300 mb-4 text-center">
+    return (<div className="rounded-lg shadow-lg">
+    <h1 className="font-bold text-white-300 text-center">
    Bodega destacada del mes        </h1>
-    <img
-      className="w-full h-auto rounded-lg border-4 border-yellow-300 shadow-xl"
+    <Image
+      className="imgborder w-full h-auto rounded-lg shadow-xl"
       src={`/cava1220/header/Banner-Rutini.webp`}
       alt="Celebración"
+      width={1200}
+      height={500}
     />
   </div>)
 }

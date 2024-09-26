@@ -40,7 +40,7 @@ const Distribuidora = () => {
       <div>
         {/* Mostrar el estado de la sesión */}
         {status === "authenticated" ? (
-          <p className="mt-5">
+          <p className="container mx-auto mt-5">
             {" "}
             <b className=" ">{session.user?.email || "Usuario"}</b>
             <small className="ml-5">Ver cuenta</small>
@@ -51,7 +51,7 @@ const Distribuidora = () => {
         ) : (
           <p>No has iniciado sesión</p>
         )}
-        <div className="">
+        <div className="container mx-auto">
           <div className="flex justify-between">
             <div className="m-1">
               <button
@@ -103,7 +103,7 @@ const Distribuidora = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="m-2 p-2 productos-grid">
+          <div className="m- productos-grid">
             {productosPaginados.length > 0 ? (
               productosPaginados.map((producto, index) => (
                 <div key={index} className="card">
@@ -112,8 +112,8 @@ const Distribuidora = () => {
                     src={glen}
                     alt="img"
                     className="imgenImg"
-                    width={2200}
-                    height={90}
+                    width={150}
+                    height={150}
                   />
                   <p>{producto.descripcion}</p>
                   {/* Mostrar precio si el usuario está autenticado */}
@@ -171,7 +171,7 @@ const Distribuidora = () => {
           <Link href="/">Volver al inicio</Link>
         </button>
       </div>
-      <Fetchsheets />
+      <Fetchsheets className="container mx-auto" />
     </div>
   );
 };

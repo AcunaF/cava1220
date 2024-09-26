@@ -5,6 +5,7 @@ import Link from "next/link";
 import PaymentMethods from "../../components/metodosPago/paymentMethods";
 import Image from "next/image";
 
+// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Eventos() {
   const { idEventos } = useParams();
 
@@ -20,7 +21,7 @@ export default async function Eventos() {
   const formattedDate = evento.date.toLocaleDateString();
 
   return (
-    <div className="relative top-5">
+    <div className="container mx-auto top-5">
       <section className="top-5 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <div
           key={evento.id}

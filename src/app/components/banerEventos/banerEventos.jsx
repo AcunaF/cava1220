@@ -6,11 +6,11 @@ export default function BannerEventos() {
         <h1 className="text-4xl font-bold text-white-300 mb-4 text-center">
        Eventos locales y Notas de interes      </h1>
        <div className="justify-center items-center w-full h-full">
-      <div className="relative rounded-lg border-4 border-yellow-300 shadow-xl">
+      <div className="imgborder relative shadow-xl">
         <Image
           src={`/eventos/bannerE.jpg`}
-          width={100}
-          height={100}
+          width={1100}
+          height={600}
           alt="Celebración"
           className="imgEventos object-cover"
         />
