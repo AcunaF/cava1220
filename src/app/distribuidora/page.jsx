@@ -103,7 +103,7 @@ const Distribuidora = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="m- productos-grid">
+          <div className="container productos-grid">
             {productosPaginados.length > 0 ? (
               productosPaginados.map((producto, index) => (
                 <div key={index} className="card">

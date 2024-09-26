@@ -1,5 +1,14 @@
 export default function Loading() {
     return (
-      <div>Loading...</div>
-    );
+<div role="status m-5">
+<div className="flex items-center justify-center m-5">
+  <div
+    className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+    role="status">
+    <span className="loading loading-dots loading-xs"></span>
+
+  </div>
+</div>
+</div>  
+  );
   }

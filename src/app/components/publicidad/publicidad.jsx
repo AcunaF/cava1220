@@ -9,8 +9,8 @@ export default function Publicidad (){
       className="imgborder w-full h-auto rounded-lg shadow-xl"
       src={`/cava1220/header/trivento.webp`}
       alt="Celebración"
-      width={900}
-      height={100}
+      width={400}
+      height={200}
     />
   </div>)
 }

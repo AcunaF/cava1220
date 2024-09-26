@@ -9,7 +9,7 @@ export default function BannerEventos() {
       <div className="borderimg relative rounded-lg border-4 shadow-xl">
         <Image
           src={`/eventos/bannerE.jpg`}
-          width={100}
+          width={800}
           height={100}
           alt="Celebración"
           className="imgEventos object-cover"

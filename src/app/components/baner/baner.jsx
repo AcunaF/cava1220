@@ -47,7 +47,7 @@ export default function Banner() {
 
   return (
     <div className="carousel-container" onTouchStart={handleTouchStart}>
-    <h1 className="text-4xl font-bold text-white-300 mb-4 text-center">
+    <h1 className="text-4xl font-bold text-white-300 m-5 text-center">
     Nuestros eventos
       </h1>
       <div className="relative h-56 overflow-hidden md:h-96">

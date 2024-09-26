@@ -14,12 +14,12 @@
   
   h2 {
     text-align: center;
-    color:white !important;;
+    color :#baab8f !important;;
   }
   
   table {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid  #baab8f;
   }
   
   th, td {
@@ -47,7 +47,7 @@
   }
   
   .card {
-    border: 1px solid #ddd;
+    border: 1px solid #baab8f;
     border-radius: 10px;
     padding: 20px;
     background-color: transparent;
@@ -66,7 +66,7 @@
   
   .card p {
     margin-bottom: 10px;
-    color: #666;
+    color: #baab8f !important;;
   }
   
   .card-actions {
@@ -78,7 +78,7 @@
   
   .card button {
     padding: 10px 15px;
-    background-color: white;
+    background-color: rgb(238, 227, 227);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,7 +86,7 @@
   }
   
   .card button:hover {
-    background-color: white;
+    background-color: #baab8f;
   }
   
   .card-shipping {
@@ -94,12 +94,12 @@
   }
   
   .card-shipping button {
-    background-color: white;
+    background-color: rgb(238, 227, 227);
     color: black;
   }
   
   .card-shipping button:hover {
-    background-color: #357ae8;
+    background-color:  #baab8f;
   }
 
   .imgenImg{
