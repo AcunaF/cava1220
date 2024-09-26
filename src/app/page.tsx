@@ -19,7 +19,9 @@ export default async function Home() {
       <div className="">
         <Publicidas />
       </div>
-      <h1 className="mt-5 mb-5">EVENTOS • CATAS • DEGUSTACIONES</h1>
+      <h1 className="text-4xl font-bold text-white-300 mt-5 mb-5 mb-4 text-center">
+
+    EVENTOS • CATAS • DEGUSTACIONES</h1>
 
       <section className="restaurants-grid">
         {restaurants.map((restaurant) => {
