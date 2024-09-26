@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useState } from "react";
 import apiProductos from "../../Stock";
 import Image from "next/image";
@@ -9,26 +9,23 @@ import "../../app/distribuidora/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Fetchsheets from "../components/fetch/sheets";
-//import {glen} from "@/public/glenfidich.png";
+import { useCart } from "../../app/CartContext"; // Importa el hook del carrito
 
 const Distribuidora = () => {
   const { data: session, status } = useSession();
-
-  console.log("session: ", session?.user, "status", status);
+  const { addToCart, removeFromCart } = useCart(); // Desestructura las funciones del carrito
   const [tipo, setTipo] = useState("promociones");
   const [paginaActual, setPaginaActual] = useState(1);
   const productosPorPagina = 10;
+
   // Verifica si el usuario está autenticado antes de llamar a la API de productos
   const productos = apiProductos.fetch(tipo);
-  // Calcular el índice inicial y final de productos a mostrar según la página
+  
   const indiceUltimoProducto = paginaActual * productosPorPagina;
   const indicePrimerProducto = indiceUltimoProducto - productosPorPagina;
-  const productosPaginados = productos.slice(
-    indicePrimerProducto,
-    indiceUltimoProducto
-  );
-  // Número total de páginas
+  const productosPaginados = productos.slice(indicePrimerProducto, indiceUltimoProducto);
   const totalPaginas = Math.ceil(productos.length / productosPorPagina);
+  
   const cambiarPagina = (nuevaPagina) => {
     if (nuevaPagina >= 1 && nuevaPagina <= totalPaginas) {
       setPaginaActual(nuevaPagina);
@@ -38,64 +35,41 @@ const Distribuidora = () => {
   return (
     <div className="">
       <div>
-        {/* Mostrar el estado de la sesión */}
-        {status === "authenticated" ? (
-          <p className="container mx-auto mt-5">
-            {" "}
-            <b className=" ">{session.user?.email || "Usuario"}</b>
-            <small className="ml-5">Ver cuenta</small>
-            <small className="ml-5">
-              Carrito <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
-            </small>
-          </p>
-        ) : (
-          <p>No has iniciado sesión</p>
-        )}
+        <div className="m-4">
+          {/* Mostrar el estado de la sesión */}
+          {status === "authenticated" ? (
+            <p className="mx-auto m-5">
+              <b className=" m-5 ">{session.user?.email || "Usuario"}</b>
+              <Link className="mr-2" href="/distribuidora/usuario/usuario/">
+                <b>Ver cuenta</b>
+              </Link>{" "}
+              <Link className="mr-2" href="/distribuidora/carrito/carrito/">
+                Carrito{" "}
+                <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
+              </Link>
+            </p>
+          ) : (
+            <p>No has iniciado sesión</p>
+          )}
+        </div>
         <div className="container mx-auto">
           <div className="flex justify-between">
             <div className="m-1">
-              <button
-                className="m-2"
-                onClick={() => {
-                  setTipo("destilados");
-                  setPaginaActual(1);
-                }}
-              >
+              <button className="m-2" onClick={() => setTipo("destilados")}>
                 Destilados
               </button>
-              <button
-                className="m-2"
-                onClick={() => {
-                  setTipo("gin");
-                  setPaginaActual(1);
-                }}
-              >
+              <button className="m-2" onClick={() => setTipo("gin")}>
                 Gin
               </button>
-              <button
-                className="m-2"
-                onClick={() => {
-                  setTipo("vinos");
-                  setPaginaActual(1);
-                }}
-              >
+              <button className="m-2" onClick={() => setTipo("vinos")}>
                 Vinos
               </button>
-              <button
-                className="m-2"
-                onClick={() => {
-                  setTipo("bebidas");
-                  setPaginaActual(1);
-                }}
-              >
+              <button className="m-2" onClick={() => setTipo("bebidas")}>
                 Bebidas
               </button>
               <button
                 className="m-2 text-yellow-300 shadow-xl"
-                onClick={() => {
-                  setTipo("promociones");
-                  setPaginaActual(1);
-                }}
+                onClick={() => setTipo("promociones")}
               >
                 PROMOCIONES
               </button>
@@ -103,7 +77,7 @@ const Distribuidora = () => {
           </div>
 
           {/* Tabla de productos */}
-          <div className="container productos-grid">
+          <div className="productos-grid">
             {productosPaginados.length > 0 ? (
               productosPaginados.map((producto, index) => (
                 <div key={index} className="card">
@@ -112,7 +86,7 @@ const Distribuidora = () => {
                     src={glen}
                     alt="img"
                     className="imgenImg"
-                    width={150}
+                    width={500}
                     height={150}
                   />
                   <p>{producto.descripcion}</p>
@@ -125,19 +99,15 @@ const Distribuidora = () => {
                         : producto.precio}
                     </p>
                   )}
-                  <p>
-                    Stock: {producto.stock ? producto.stock : "Inicia sesión"}
-                  </p>
+                  <p>Stock: {producto.stock ? producto.stock : "Inicia sesión"}</p>
+                  
+                  {/* Acciones del carrito */}
                   <div className="card-actions">
-                    <button onClick={() => alert("Agregado al carrito")}>
-                      Agregar
-                    </button>
-                    <button onClick={() => alert("Quitado del carrito")}>
-                      Quitar
-                    </button>
+                    <button onClick={() => addToCart(producto)}>Agregar</button>
+                    <button onClick={() => removeFromCart(producto.id)}>Quitar</button>
                   </div>
                   <div className="card-shipping">
-                    <button> envio</button>
+                    <button>Envio</button>
                   </div>
                 </div>
               ))
@@ -145,6 +115,7 @@ const Distribuidora = () => {
               <p>No hay productos disponibles. Elige una categoría.</p>
             )}
           </div>
+          
           {/* Paginación */}
           <div className="pagination">
             <button
@@ -166,12 +137,11 @@ const Distribuidora = () => {
             </button>
           </div>
         </div>
-
-        <button>
-          <Link href="/">Volver al inicio</Link>
-        </button>
       </div>
       <Fetchsheets className="container mx-auto" />
+      <button className="container mx-auto">
+        <Link href="/">Volver al inicio</Link>
+      </button>
     </div>
   );
 };

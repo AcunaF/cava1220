@@ -7,9 +7,9 @@ export default function Publicidad (){
    Malbec COLLECTIONS       </h1>
     <Image
       className="imgborder w-full h-auto rounded-lg shadow-xl"
-      src={`/cava1220/header/trivento.webp`}
+      src={`/cobos.webp`}
       alt="Celebración"
-      width={400}
+      width={1220}
       height={200}
     />
   </div>)

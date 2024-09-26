@@ -3,6 +3,7 @@ import Footer from "../app/footer/footer";
 import NavBar from "../app/components/navbar/navbar";
 import Providers from "./providers";
 import Loading from "./loading";
+import { CartProvider } from "../app/CartContext";
 
 import "./globals.css";
 import { Suspense } from "react";
@@ -26,7 +27,9 @@ export default function RootLayout({
         
         <Suspense fallback={<Loading/>}>
           <Providers>
+          <CartProvider>
             <main className="pt-[4rem] py-8">{children}</main>
+            </CartProvider>
           </Providers>
         </Suspense>
         <footer className="text-center leading-[3rem] opacity-70">
