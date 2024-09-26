@@ -16,9 +16,11 @@ export default async function Home() {
         <Header />
         <Banner />
       </div>
-      <div className="m-">
+      <div className="">
         <Publicidas />
       </div>
+      <h1 className="mt-5 mb-5">EVENTOS • CATAS • DEGUSTACIONES</h1>
+
       <section className="restaurants-grid">
         {restaurants.map((restaurant) => {
           return (

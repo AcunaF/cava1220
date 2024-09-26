@@ -2,33 +2,27 @@ import apiEventos from "../../apiEventos";
 import Link from "next/link";
 import BannerEventos from "../components/banerEventos/banerEventos";
 import Image from "next/image";
-import "./styles.css"
 
 export default async function Eventos() {
   // Obtener la lista de eventos del lado del servidor
   const eventos = await apiEventos.list();
 
   return (
-    <div className="container mx-auto">
-      <div className="m-5">
+    <div className="container mx-auto ">
+      <div className="mt-5 p-2" >
         <BannerEventos />
-        <h1 className="text-3xl font-bold">Eventos</h1>
-        <p>
-          En esta sección podrás encontrar todos los eventos que están
-          programados para ti.
-        </p>
+       
       </div>
-      <div className="page-header">
-      <section className=" grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 ml-3 mr-3">
         {eventos.map((evento) => (
           <div
             key={evento.id}
-            className="imgborder p-4 imgborder"
+            className="p-4 border border-gray-200 rounded-lg"
           >
             <Image
               alt={evento.title}
               className="mb-3 h-[300px] w-full object-cover"
-              width={500}
+              width={800}
               height={400}
               src={evento.image}
             />
@@ -51,7 +45,6 @@ export default async function Eventos() {
           </div>
         ))}
       </section>
-      </div>
     </div>
   );
 }
