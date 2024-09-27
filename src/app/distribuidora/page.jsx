@@ -2,18 +2,17 @@
 import React, { useState } from "react";
 import apiProductos from "../../Stock";
 import Image from "next/image";
-import glen from "@/public/cava1220/logoNegro.jpeg";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import "../../app/distribuidora/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Fetchsheets from "../components/fetch/sheets";
-import { useCart } from "../../app/CartContext"; // Importa el hook del carrito
+import { useCart } from "../../app/CartContext"; 
 
 const Distribuidora = () => {
   const { data: session, status } = useSession();
-  const { addToCart, removeFromCart } = useCart(); // Desestructura las funciones del carrito
+  const { addToCart, removeFromCart } = useCart(); 
   const [tipo, setTipo] = useState("promociones");
   const [paginaActual, setPaginaActual] = useState(1);
   const productosPorPagina = 10;
@@ -83,7 +82,7 @@ const Distribuidora = () => {
                 <div key={index} className="card">
                   <h2>{producto.nombre}</h2>
                   <Image
-                    src={glen}
+                    src={producto?.imagen || ''}
                     alt="img"
                     className="imgenImg"
                     width={500}

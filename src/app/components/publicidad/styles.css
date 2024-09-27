@@ -1,4 +1,5 @@
 .imgborder{
+    height: 100%;
     border: 4px solid #baab8f;
     border-radius: 10px;
 }

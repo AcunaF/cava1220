@@ -2,6 +2,8 @@ interface Producto {
   nombre: string;
   precio: [string, string];
   tipo: string;
+  imagen?: string;
+
 }
 
 const productos: Producto[] = [
@@ -9,6 +11,19 @@ const productos: Producto[] = [
     nombre: "Glenfiddich 15 años x 750 ml",
     precio: ["$ 43.265,53", "$ 57.210,62"],
     tipo: "destilados",
+
+  },{
+    nombre: "Nicasia malbec x 12 unidades",
+    precio: ["$ 39.990 ", " $ 44.990"],
+    tipo: "vinos",
+    imagen: "/promociones/promoNicasia.jpeg"
+  },
+
+  {
+    nombre: "Tanqueraay + 2 Britvic tonica",
+    precio: ["$ 27.000" , " $ 00.000"],
+    tipo: "gin",
+    imagen: "/promociones/promoTanque.jpeg"
   },
   {
     nombre: "Tanqueray London Dry Gin x 700 ml",
@@ -16,9 +31,11 @@ const productos: Producto[] = [
     tipo: "gin",
   },
   {
-    nombre: "Malbec 750 ml",
-    precio: ["$ 1.200,00", "$ 1.600,00"],
+    nombre: "River vs Boca",
+    precio: ["$ 15.000", "$ 19.600,00"],
     tipo: "vinos",
+    imagen: "/river.jpeg"
+
   },
   {
     nombre: "Gatorade x 600 ml",
@@ -66,9 +83,12 @@ const productos: Producto[] = [
     tipo: "destilados",
   },
   {
-    nombre: "WoodfordReserve 1000 ml + 1 Vaso Grabado (En caja)",
-    precio: ["$ 43.125,00", "$ 57.024,79"],
-    tipo: "destilados",
+    nombre: "Familia Gascon Tempranillo Rose Chardonnay Malbec C. Sauvignon x 6 unidades",
+    precio: ["$ 25.500,00", "$ 30.024,79"],
+    tipo: "vinos",
+    imagen: "/gascon.jpeg"
+
+
   },
   {
     nombre: "WoodfordReserve 1000 ml",
@@ -145,15 +165,12 @@ const productos: Producto[] = [
     precio: ["$ 87.120,00", "$ 115.200,00"],
     tipo: "destilados",
   },
+
   {
-    nombre: "The Macallan Terra x 700 ml",
-    precio: ["$ 97.750,00", "$ 129.256,20"],
-    tipo: "destilados",
-  },
-  {
-    nombre: "The Macallan Terra x 700 ml",
-    precio: ["$ 97.750,00", "$ 129.256,20"],
+    nombre: "Gin Bombay",
+    precio: ["$ 25900", "$ 48.000,00"],
     tipo: "promociones",
+    imagen:"/bombai.jpeg"
   },
   {
     nombre: "Jack Daniel's Single Barrel x 750 ml + 2 VASOS",

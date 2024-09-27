@@ -12,6 +12,15 @@ interface Restaurant {
 const restaurants: Restaurant[] = [
   {
     id: "1",
+    name: "Incorporacion Bodega Falasco",
+    description:"En el año 2008, Guillermo García Lamadrid de orígenes caribeños, adquiere una antigua Bodega fundada en 1959, ubicada en el distrito de La Compuertas, Luján de Cuyo. Desde aquí comienza una gran transformación, invirtiéndose en tecnología, capacidad y reacondicionando las instalaciones tal como las vemos hoy, llegando a tener una capacidad total 2.200.000 de litro",
+    address: "Mendoza, Las compuertas",
+    score: 4.5,
+    ratings: 100,
+    image: "/promociones/Falasco.jpeg",
+  },
+  {
+    id: "2",
     name: "Degustacion bodega Mil suelos",
     description:
       "A fine dining experience with a menu that changes daily based on the freshest ingredients available.",
@@ -21,7 +30,7 @@ const restaurants: Restaurant[] = [
     image: "/cava1220/bodega.jpeg",
   },
   {
-    id: "2",
+    id: "3",
     name: "Menu",
     description: "Authentic Italian cuisine in a cozy atmosphere with outdoor seating available.",
     address: "456 Oak Ave. Anytown USA",
@@ -30,7 +39,7 @@ const restaurants: Restaurant[] = [
     image: "/cava1220/menu.jpeg",
   },
   {
-    id: "3",
+    id: "4",
     name: "Piccolo Bamfi Conclave",
     
     description:
@@ -41,16 +50,16 @@ const restaurants: Restaurant[] = [
     image: "/cava1220/vinos.jpeg",
   },
   {
-    id: "4",
-    name: "The Hungry Bear",
-    description: "A rustic cabin-style restaurant serving hearty portions of comfort food.",
-    address: "101 Forest Rd. Anytown USA",
+    id: "5",
+    name: "Nicasia Malbec",
+    description: "El concepto de Bodega de familia ha sido desarrollado desde siempre por los emblemáticos hacedores de vino que lograron los grandes íconos de la historia y que sorprendieron al mundo marcando estilos.",
+    address: "Mendoza, Lujan de cuyo",
     score: 4.0,
     ratings: 60,
-    image: "/restaurants/5.jpg",
+    image: "/promociones/Nicasia.jpeg",
   },
   {
-    id: "5",
+    id: "6",
     name: "The Spice Route",
     description: "A fusion restaurant that combines the flavors of India. Thailand. and China.",
     address: "246 Main St. Anytown USA",
@@ -59,7 +68,7 @@ const restaurants: Restaurant[] = [
     image:"/restaurants/6.jpg",
   },
   {
-    id: "6",
+    id: "7",
     name: "After viernes 13-7",
     description: "A seafood restaurant with a focus on locally-sourced. sustainable ingredients.",
     address: "369 Beach Blvd. Anytown USA",
@@ -68,7 +77,7 @@ const restaurants: Restaurant[] = [
     image: "/cava1220/after13-7.jpeg",
   },
   {
-    id: "7",
+    id: "8",
     name: "The Garden Cafe",
     description: "A vegetarian restaurant with a beautiful outdoor garden seating area.",
     address: "753 Maple St. Anytown USA",
@@ -77,7 +86,7 @@ const restaurants: Restaurant[] = [
     image: "/restaurants/8.jpg",
   },
   {
-    id: "8",
+    id: "9",
     name: "The Burger Joint",
     description: "A classic American diner with a wide variety of burgers. fries. and milkshakes.",
     address: "852 Oak Ave. Anytown USA",
@@ -86,7 +95,7 @@ const restaurants: Restaurant[] = [
     image:"/restaurants/9.jpg",
   },
   {
-    id: "9",
+    id: "10",
     name: "The Cozy Corner",
     description:
       "A small cafe with a warm and inviting atmosphere. serving breakfast and lunch dishes.",
@@ -95,33 +104,7 @@ const restaurants: Restaurant[] = [
     ratings: 110,
     image: "/restaurants/10.jpg",
   },
-  {
-    id: "10",
-    name: "The Steakhouse",
-    description: "A high-end restaurant specializing in premium cuts of beef and fine wines.",
-    address: "1479 Elm St. Anytown USA",
-    score: 4.1,
-    ratings: 75,
-    image: "/restaurants/11.jpg",
-  },
-  {
-    id: "11",
-    name: "The Taco Truck",
-    description: "A casual Mexican restaurant serving authentic street tacos.",
-    address: "753 Main St. Anytown USA",
-    score: 4.4,
-    ratings: 65,
-    image:"/restaurants/12.jpg",
-  },
-  {
-    id: "12",
-    name: "The Ice Cream Parlor",
-    description: "A family-friendly restaurant with a wide variety of ice cream flavors.",
-    address: "852 Oak Ave. Anytown USA",
-    score: 4.9,
-    ratings: 150,
-    image: "/restaurants/7.jpg",
-  },
+  
 ];
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

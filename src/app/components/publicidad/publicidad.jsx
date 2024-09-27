@@ -6,11 +6,11 @@ export default function Publicidad (){
     <h1 className="text-4xl font-bold text-white-300 mb-4 text-center">
    Malbec COLLECTIONS       </h1>
     <Image
-      className="imgborder w-full h-auto rounded-lg shadow-xl"
-      src={`/cobos.webp`}
+      className="object-cover h-112 w-full rounded-lg shadow-xl"
+      src={`/nicasiaVineyard.png`}
       alt="Celebración"
-      width={1220}
-      height={200}
+      width={800}
+      height={400}
     />
   </div>)
 }

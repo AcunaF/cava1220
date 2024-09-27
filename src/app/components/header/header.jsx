@@ -5,11 +5,11 @@ export default function Header() {
     <div className="headerHe">
       <h1 className="main-title"></h1>
       <Image
-        className="imgBorder w-full h-auto shadow-xl"
+        className="imgBorder object-cover h-112 w-full shadow-xl"
         src={`/cava1220/header/celebrar.jpg`}
         alt="Celebración"
-        width={700}
-        height={200}
+        width={1200}
+        height={400}
       />
     </div>
   );
