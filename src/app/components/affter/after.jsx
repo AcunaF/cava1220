@@ -1,13 +1,28 @@
+import Link from "next/link";
+
 export default function After() {
-    return (
-      <div className="headerHe flex flex-col h-32 w-full items-center justify-center min-h-screen mt-5">
-                <h1 className="text-4xl font-bold text-white-300 mt-5 mb-5 mb-4 text-center">
-                After viernes 4 de septiembre</h1>
-        <video className="h-full w-full rounded-lg"
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center text-center mb-5">
+        <h1 className="text-4xl font-bold text-white mb-4 shadow-lg">
+          After viernes 4 de septiembre
+        </h1>
+        {/* Video */}
+        <video
+          className="restaurant-card w-3/4 h-auto rounded-lg shadow-lg"
           src="/after/after0.mp4"
-          controls autoPlay muted
+          controls
+          autoPlay
+          muted
         />
       </div>
-    );
-  }
-  
+      {/* Botón */}
+      <Link
+        href="/eventos"
+        className="mt-10 bg-gradient-to-r from-gray-500 to-blue-500 text-white px-6 py-3 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105 hover:from-indigo-500 hover:to-purple-500"
+      >
+        ¿Quieres ir?
+      </Link>
+    </div>
+  );
+}

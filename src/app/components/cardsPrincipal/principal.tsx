@@ -18,7 +18,6 @@ export default async function Principal (){
               return (
                 <div key={restaurant.id} className="restaurant-card">
                   <Image
-                  
                     width={1500} // Ajusta el ancho según el tamaño real de la imagen
                     height={900} // Ajusta la altura según el tamaño real de la imagen
                     alt={restaurant.name}

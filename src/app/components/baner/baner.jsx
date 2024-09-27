@@ -70,7 +70,7 @@ export default function Banner() {
 </div>
 
         {/* Botón anterior */}
-        <div className="button">
+        <div className="">
           <button
             type="button"
             className="carousel-button carousel-prev"
@@ -112,7 +112,6 @@ export default function Banner() {
             <span className="sr-only">Siguiente</span>
           </button>
         </div>
-        
       </div>
     </div>
   );
