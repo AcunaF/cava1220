@@ -48,7 +48,7 @@ export default function Banner() {
   return (
     <div>
       <h1 className="text-4xl font-bold text-white-300 m-5 text-center">
-        Nuestros eventos
+        Nuestras promos de la semana
       </h1>
       <div className="carousel-container" onTouchStart={handleTouchStart}>
       <div className="flex justify-center items-center h-96 w-full">
