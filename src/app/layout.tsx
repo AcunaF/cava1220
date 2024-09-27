@@ -23,8 +23,7 @@ export default function RootLayout({
       <body className="grid min-h-screen grid-rows-[auto,1fr,auto]">
         <header className="fixed top-0 left-0 right-0 flex items-center justify-between text-xl font-bold leading-[4rem] bg-black border-b-4 border-white z-50">
             <NavBar />
-        </header>
-        
+        </header>       
         <Suspense fallback={<Loading/>}>
           <Providers>
           <CartProvider>

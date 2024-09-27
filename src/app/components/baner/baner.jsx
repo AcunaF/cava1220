@@ -59,7 +59,7 @@ export default function Banner() {
       ref={(el) => (carouselItemsRef.current[index] = el)}
     >
       <Image
-        className="object-cover h-full w-full"
+        className="object-cover h-64 w-full"
         src={`/cava1220/carousel/images${index}.jpeg`}
         layout="fill"
         objectFit="cover" // Asegura que la imagen llene el ancho y mantenga proporciones
@@ -68,7 +68,6 @@ export default function Banner() {
     </div>
   ))}
 </div>
-
 
         {/* Botón anterior */}
         <div className="button">
@@ -113,6 +112,7 @@ export default function Banner() {
             <span className="sr-only">Siguiente</span>
           </button>
         </div>
+        
       </div>
     </div>
   );

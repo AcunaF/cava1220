@@ -3,6 +3,8 @@ import Header from "../../src/app/components/header/header";
 import Publicidas from "../../src/app/components/publicidad/publicidad";
 import Publicidad2 from "../../src/app/components/publicidad2/publicidad2";
 import Principal from "./components/cardsPrincipal/principal";
+import After from "../app/components/affter/after";
+
 import "./page.styles.css";
 
 export default async function Home() {
@@ -11,6 +13,9 @@ export default async function Home() {
       <div className="m-8">
         <Header />
         <Banner />
+      </div>
+      <div className="m-10">
+      <After />
       </div>
       <div className="m-2">
         <Publicidas />

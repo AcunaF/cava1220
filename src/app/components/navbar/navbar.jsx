@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,9 +42,17 @@ export default function Navbar() {
 
         {/* Menú de navegación (oculto en móviles, visible en pantallas más grandes) */}
         <nav className={`hidden md:flex items-center space-x-6 ml-5`}>
-          <Link href="/eventos" className="text-white">Eventos</Link>
-          <Link href="/distribuidora" className="text-white">Distribuidora</Link>
-          <Link href="/login" className="text-white">Login</Link>
+          <Link href="/eventos" className="text-white">
+            Eventos
+          </Link>
+          <Link href="/distribuidora" className="text-white">
+            Distribuidora
+          </Link>
+          <Link href="/login" className="text-white">
+            Login
+          </Link>
+          {/*    <Link href="/" className="py-2 text-white" onClick={closeMenu}>Cursos</Link>
+          <Link href="/" className="py-2 text-white" onClick={closeMenu}>Servicios</Link> */}
         </nav>
       </header>
 
@@ -52,9 +60,25 @@ export default function Navbar() {
       {isOpen && (
         <div className="absolute top-16 right-0 bg-black w-full md:hidden">
           <nav className="mt-5 flex flex-col items-center">
-            <Link href="/eventos" className="py-2 text-white" onClick={closeMenu}>Eventos</Link>
-            <Link href="/distribuidora" className="py-2 text-white" onClick={closeMenu}>Distribuidora</Link>
-            <Link href="/login" className="py-2 text-white" onClick={closeMenu}>Login</Link>
+            <Link
+              href="/eventos"
+              className="py-2 text-white"
+              onClick={closeMenu}
+            >
+              Eventos
+            </Link>
+            <Link
+              href="/distribuidora"
+              className="py-2 text-white"
+              onClick={closeMenu}
+            >
+              Distribuidora
+            </Link>
+            <Link href="/login" className="py-2 text-white" onClick={closeMenu}>
+              Login
+            </Link>
+            {/*  <Link href="/" className="py-2 text-white" onClick={closeMenu}>Cursos</Link>
+            <Link href="/" className="py-2 text-white" onClick={closeMenu}>Servicios</Link>*/}
           </nav>
         </div>
       )}
