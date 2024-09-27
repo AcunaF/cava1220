@@ -63,7 +63,7 @@ export default function Banner() {
         src={`/cava1220/carousel/images${index}.jpeg`}
         layout="fill"
         objectFit="cover" // Asegura que la imagen llene el ancho y mantenga proporciones
-        alt={`Descripción ${index + 1}`}
+        alt="hola"
       />
     </div>
   ))}
