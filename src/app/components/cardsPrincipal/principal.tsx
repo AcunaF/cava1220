@@ -11,17 +11,17 @@ export default async function Principal (){
         <div>
         <h1 className="text-4xl font-bold text-white-300 mt-5 mb-5 mb-4 text-center">
 
-        EVENTOS • CATAS • DEGUSTACIONES</h1>
+        NOVEDADES • EVENTOS • CATAS • DEGUSTACIONES</h1>
     
           <section className="restaurants-grid">
             {restaurants.map((restaurant) => {
               return (
-                <div key={restaurant.id} className=" restaurant-card">
+                <div key={restaurant.id} className="restaurant-card">
                   <Image
-                    width={500} // Ajusta el ancho según el tamaño real de la imagen
+                  
+                    width={1500} // Ajusta el ancho según el tamaño real de la imagen
                     height={900} // Ajusta la altura según el tamaño real de la imagen
                     alt={restaurant.name}
-                    className="restaurant-image"
                     src={restaurant.image}
                   />
                   <h2 className="restaurant-name">
