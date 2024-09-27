@@ -14,7 +14,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+        <div className=" sm:px-6 lg:col-span-3 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             <div>
               <p>
@@ -28,7 +28,7 @@ export default function Footer() {
                   0123456789
                 </a>
               </p>
-              <ul className="space-y-1 text-sm text-gray-700">
+              <ul className="text-sm text-gray-700">
                 <li>Monday to Friday: 10am - 5pm</li>
                 <li>Weekend: 10am - 3pm</li>
               </ul>
@@ -37,7 +37,7 @@ export default function Footer() {
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <p className="font-medium text-gray-900">Services</p>
-                <ul className="mt-6 space-y-4 text-sm">
+                <ul className=" text-sm">
                   <li>
                     <a
                       href="https://www.google.com/"
@@ -47,21 +47,6 @@ export default function Footer() {
                     </a>
                   </li>
                   {/* Repite para otros servicios */}
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-medium text-gray-900">Company</p>
-                <ul className=" text-sm">
-                  <li>
-                    <a
-                      href="https://www.google.com/"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      About
-                    </a>
-                  </li>
-                  {/* Repite para otras secciones de la empresa */}
                 </ul>
               </div>
             </div>
