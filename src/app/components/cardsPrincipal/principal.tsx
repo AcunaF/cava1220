@@ -9,7 +9,9 @@ export default async function Principal (){
 
     return(
         <div>
-        <h1 className="text-4xl font-bold text-white-300 mt-5 mb-5 mb-4 text-center">
+        <h1 className="text-4xl font-bold text-white-300 mt-5 mb-5 mb-4 text-center"
+        style={{color: "#baab8f"}}
+        >
 
         NOVEDADES • EVENTOS • CATAS • DEGUSTACIONES</h1>
     

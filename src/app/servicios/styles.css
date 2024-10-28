@@ -7,9 +7,11 @@
 
 .restaurant-card {
   padding: 16px; /* Espaciado interno */
+  color:#baab8f;
   border: 3px solid #baab8f; /* Color de borde */
   border-radius: 8px; /* Bordes redondeados */
   width: 100%; /* Asegura que ocupe todo el ancho */
+  height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
   transition: transform 0.3s ease; /* Animación */
 }
@@ -19,13 +21,14 @@
 }
 
 .restaurant-image {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  height: auto; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-  border-radius: 5px; /* Opcional: bordes redondeados de la imagen */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 5px; 
 }
 
 .restaurant-name {
+  color:white;
   font-size: 1.25rem; /* Tamaño de fuente para el nombre */
   font-weight: bold; /* Negrita */
   margin-bottom: 8px; /* Margen inferior */
@@ -34,14 +37,13 @@
 .restaurant-link {
   font-size: 1rem; /* Tamaño de fuente para el enlace */
   font-weight: 600; /* Peso de fuente */
-  text-decoration: underline; /* Subrayado al pasar el ratón */
   color: #333; /* Color de texto */
 }
 
 .restaurant-description {
   margin: 0; /* Eliminar margen para el párrafo */
-  font-size: 0.9rem; /* Tamaño de fuente */
-  color: #666; /* Color de texto */
+  font-size: 1rem; /* Tamaño de fuente */
+  color:#baab8f;
 }
 
 /* Estilos responsivos */
@@ -56,3 +58,62 @@
       grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
   }
 }
+/* Contenedor del formulario */
+.form-horizontal {
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centrar el formulario */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de las etiquetas */
+.form-group label {
+  display: block; /* Hacer que la etiqueta ocupe toda la línea */
+  margin-bottom: 8px; /* Espacio debajo de la etiqueta */
+  font-weight: bold; /* Negrita */
+  color:  #baab8f; /* Color del texto */
+}
+
+/* Estilo de los campos de entrada y textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid  #baab8f; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Estilo del textarea */
+.form-group textarea {
+  min-height: 100px; /* Altura mínima del textarea */
+}
+
+/* Efecto en los campos al enfocarse */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #baab8f; /* Color del borde al enfocar */
+  outline: none; /* Quitar el contorno por defecto */
+}
+
+/* Estilo del botón */
+.btn {
+  display: inline-block; /* Alinear como bloque en línea */
+  padding: 10px 15px; /* Espaciado interno del botón */
+  background-color:  #baab8f; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto en el botón al pasar el mouse */
+.btn:hover {
+  background-color: #baab8f; /* Color más oscuro al pasar el mouse */
+}
+
+

@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function Publicidad (){
 
     return (<div className="rounded-lg shadow-lg">
-    <h1 className="text-4xl font-bold text-white-300 mb-4 text-center">
+    <h1 className="text-4xl font-bold text-white-300 mb-4 text-center"         style={{color: "#baab8f"}}
+    >
    Malbec COLLECTIONS       </h1>
     <div className="">
     <Image

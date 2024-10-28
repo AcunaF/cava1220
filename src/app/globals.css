@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body, html {
-  font-family: 'Open Sans '; /* Reemplaza 'Roboto' con la tipografía que prefieras */
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans; 
   margin: 2;
   padding: 2;
   background-color: #1a1a1a
@@ -15,8 +15,15 @@ body, html {
     background-color: Canvas;
   }
 
-  .h1{
-    margin: 6px;
+  h1 {
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    font-size: 5rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color: #baab8f;
+    margin: 2.5rem 0; /* Espaciado vertical */
+    text-align: center; /* Alineación centrada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    animation: fadeIn 1s ease-in; /* Efecto de desvanecimiento */
   }
 
   @media (max-width: 768px) {

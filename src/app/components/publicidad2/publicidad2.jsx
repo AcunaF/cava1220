@@ -2,7 +2,8 @@ import "./styles.css"
 import Image from "next/image"
 export default function Publicidad2 (){
     return (<div className="rounded-lg shadow-lg m-2">
-    <h1 className="font-bold text-white-300 text-center">
+    <h1 className="font-bold text-white-300 text-center"         style={{color: "#baab8f"}}
+    >
    Bodega destacada del mes        </h1>
     <Image
       className="imgborder w-full h-auto rounded-lg shadow-xl"

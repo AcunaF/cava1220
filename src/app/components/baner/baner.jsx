@@ -47,7 +47,8 @@ export default function Banner() {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold text-white-300 m-5 text-center">
+      <h1 className="text-4xl font-bold text-white-300 m-5 text-center"         style={{color: "#baab8f"}}
+      >
         Nuestras promos de la semana
       </h1>
       <div className="carousel-container" onTouchStart={handleTouchStart}>

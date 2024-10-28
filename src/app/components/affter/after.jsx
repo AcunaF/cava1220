@@ -4,7 +4,8 @@ export default function After() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center text-center mb-5">
-        <h1 className="text-4xl font-bold text-white mb-4 shadow-lg">
+        <h1 className="text-4xl font-bold text-white mb-4 shadow-lg"         style={{color: "#baab8f"}}
+        >
           After viernes 4 de septiembre
         </h1>
         {/* Video */}
