@@ -48,6 +48,9 @@ export default function Navbar() {
           <Link href="/distribuidora" className="text-white">
             Distribuidora
           </Link>
+          <Link href="/servicios" className="text-white">
+            Servicios
+          </Link>
           <Link href="/login" className="text-white">
             Login
           </Link>
