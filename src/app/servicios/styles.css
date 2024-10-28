@@ -115,5 +115,33 @@
 .btn:hover {
   background-color: #baab8f; /* Color más oscuro al pasar el mouse */
 }
+/* Estilos generales para el título h1 */
+h1 {
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    font-size: 5rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color:  #baab8f; /* Color amarillo para el texto */
+    margin: 2.5rem 0; /* Espaciado vertical */
+    text-align: center; /* Alineación centrada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    animation: fadeIn 1s ease-in; /* Efecto de desvanecimiento */
+}
+
+/* Efecto de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media query para tamaños de pantalla más grandes */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 6rem; /* Tamaño de fuente más grande en pantallas medianas y grandes */
+    }
+}
 
 

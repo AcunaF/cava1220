@@ -74,9 +74,17 @@ export default function Navbar() {
               href="/distribuidora"
               className="py-2 text-white"
               onClick={closeMenu}
-            >
+            >          
               Distribuidora
             </Link>
+            <Link
+              href="/servicios"
+              className="py-2 text-white"
+              onClick={closeMenu}
+            >          
+              Servicios
+            </Link>
+            
             <Link href="/login" className="py-2 text-white" onClick={closeMenu}>
               Login
             </Link>
